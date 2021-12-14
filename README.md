@@ -32,7 +32,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/matheushoske/CadClientes">
-    <img src="https://github.com/matheushoske/CadClientes/tree/main/images/program.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/matheushoske/CadClientes/blob/main/images/program.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Cadastro de Clientes</h3>
