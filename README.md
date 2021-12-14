@@ -32,7 +32,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/matheushoske/CadClientes">
-    <img src="images/program.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/matheushoske/CadClientes/tree/main/images/program.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Cadastro de Clientes</h3>
@@ -124,7 +124,7 @@ To get a local copy up and running follow these simple example steps.
 3. Abra o CadClientes.sln e execute o projeto
 
 4. Configure o endereço da API configurada clicando no botão config 
- <img src="images/configAPI.png" alt="Logo" width="80" height="80">
+ <img src="https://github.com/matheushoske/CadClientes/tree/main/images/configAPI.png" alt="Logo" width="80" height="80">
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
