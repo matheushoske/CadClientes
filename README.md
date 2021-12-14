@@ -216,7 +216,7 @@ Project Link: [https://github.com/matheushoske/CadClientes](https://github.com/m
 [issues-shield]: https://img.shields.io/github/issues/matheushoske/CadClientes.svg?style=for-the-badge
 [issues-url]: https://github.com/matheushoske/CadClientes/issues
 [license-shield]: https://img.shields.io/github/license/matheushoske/CadClientes.svg?style=for-the-badge
-[license-url]: https://github.com/matheushoske/CadClientes/blob/master/LICENSE.txt
+[license-url]: https://github.com/matheushoske/CadClientes/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/matheus-hoske/
 [product-screenshot]: images/program.png
