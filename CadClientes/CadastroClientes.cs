@@ -118,7 +118,7 @@ namespace CadClientes
             
         }
 
-       
+        
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
