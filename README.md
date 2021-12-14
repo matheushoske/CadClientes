@@ -124,7 +124,7 @@ To get a local copy up and running follow these simple example steps.
 3. Abra o CadClientes.sln e execute o projeto
 
 4. Configure o endereço da API configurada clicando no botão config 
- <img src="https://github.com/matheushoske/CadClientes/blob/main/images/ConfigAPI.png" alt="Logo" width="80" height="80">
+ <img src="https://github.com/matheushoske/CadClientes/blob/main/images/ConfigAPI.png" alt="ConfigAPI">
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
