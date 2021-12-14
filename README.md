@@ -35,19 +35,23 @@
     <img src="images/program.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Cadastro de Clientes</h3>
 
   <p align="center">
-    project_description
+    Foi desenvolvido em Windows forms / C# utilizando .NET Framework 4.7.2,
+ uma ferramenta para o cadastro e consulta de clientes consumindo a API 
+ <a href="https://viacep.com.br/">VIACEP</a> para a busca de endereços e consumindo também a
+ API <a href="https://github.com/matheushoske/CadClientesAPI">CadClientesAPI</a>, desenvolvida em asp.net Core para a consulta no banco 
+ de dados em MySQL.
     <br />
-    <a href="https://github.com/matheushoske/CadClientes"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/matheushoske/CadClientes"><strong>Explore »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/matheushoske/CadClientes">View Demo</a>
+    <a href="https://github.com/matheushoske/CadClientes">Ver Demo</a>
     ·
     <a href="https://github.com/matheushoske/CadClientes/issues">Report Bug</a>
     ·
-    <a href="https://github.com/matheushoske/CadClientes/issues">Request Feature</a>
+    <a href="https://github.com/matheushoske/CadClientes/issues">Requisitar Melhoria</a>
   </p>
 </div>
 
@@ -58,9 +62,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Liguagens utilizadas</a></li>
       </ul>
     </li>
     <li>
@@ -81,13 +85,13 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE PROJECT 
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
+-->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -99,45 +103,38 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
 ## Getting Started
+<!-- GETTING STARTED 
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
-
+-->
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* .NET Framework 4.7.2 instalado
+
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Instale e configure a API CadClientesAPI [https://github.com/matheushoske/CadClientesAPI](https://github.com/matheushoske/CadClientesAPI)
+2. Clone o repository
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/matheushoske/CadClientes.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Abra o CadClientes.sln e execute o projeto
+
+4. Configure o endereço da API configurada clicando no botão config 
+ <img src="images/config.png" alt="Logo" width="80" height="80">
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- USAGE EXAMPLES 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.-->
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -153,13 +150,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [] Feature 3
     - [] Nested Feature-->
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/matheushoske/CadClientes/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTING 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -173,7 +170,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>-->
 
 
 
@@ -189,7 +186,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Matheus Hoske - [@twitter_handle](https://twitter.com/twitter_handle) - matheushoske@gmail.com
+Matheus Hoske - matheushoske@gmail.com
 
 Project Link: [https://github.com/matheushoske/CadClientes](https://github.com/matheushoske/CadClientes)
 
@@ -215,9 +212,9 @@ Project Link: [https://github.com/matheushoske/CadClientes](https://github.com/m
 [forks-shield]: https://img.shields.io/github/forks/matheushoske/CadClientes.svg?style=for-the-badge
 [forks-url]: https://github.com/matheushoske/CadClientes/network/members
 [stars-shield]: https://img.shields.io/github/stars/matheushoske/CadClientes.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[stars-url]: https://github.com/matheushoske/CadClientes/stargazers
 [issues-shield]: https://img.shields.io/github/issues/matheushoske/CadClientes.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
+[issues-url]: https://github.com/matheushoske/CadClientes/issues
 [license-shield]: https://img.shields.io/github/license/matheushoske/CadClientes.svg?style=for-the-badge
 [license-url]: https://github.com/matheushoske/CadClientes/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
