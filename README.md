@@ -38,7 +38,7 @@
 <h3 align="center">Cadastro de Clientes</h3>
 
   <p align="center">
-    Foi desenvolvido em Windows forms / C# utilizando .NET Framework 4.7.2,
+    Foi desenvolvido em Windows forms / C# utilizando .NET Core 5.0,
  uma ferramenta para o cadastro e consulta de clientes consumindo a API 
  <a href="https://viacep.com.br/">VIACEP</a> para a busca de endereços e consumindo também a
  API <a href="https://github.com/matheushoske/CadClientesAPI">CadClientesAPI</a>, desenvolvida em asp.net Core para a consulta no banco 
@@ -64,7 +64,7 @@
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Liguagens utilizadas</a></li>
+        <li><a href="#arquitetura-utilizada">Arquitetura utilizada</a></li>
       </ul>
     </li>
     <li>
@@ -96,10 +96,17 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 
-### Built With
+## Arquitetura Utilizada
+* [POO](https://en.wikipedia.org/wiki/Object-oriented_programming)
+* [Princípios SOLID](https://en.wikipedia.org/wiki/SOLID#:~:text=In%20software%20engineering%2C%20SOLID%20is,engineer%20and%20instructor%20Robert%20C.)
+* [Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern)
+* [Injeção de dependências](https://docs.microsoft.com/pt-br/dotnet/core/extensions/dependency-injection)
 
-* [C#](https://angular.io/)
+* [Desenvolvido em C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
 
+<h3>Em Breve</h3>
+
+* [Adição de Testes de Unidade]
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -111,7 +118,7 @@ To get a local copy up and running follow these simple example steps.
 -->
 ### Prerequisites
 
-* .NET Framework 4.7.2 instalado
+* .NET Core 5.0 instalado
 
 
 ### Installation
@@ -126,6 +133,8 @@ To get a local copy up and running follow these simple example steps.
 4. Configure o endereço da API configurada clicando no botão config 
  <img src="https://github.com/matheushoske/CadClientes/blob/main/images/ConfigAPI.png" alt="ConfigAPI">
 
+5. Você está pronto para começar a cadastrar os clientes!
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -136,7 +145,7 @@ To get a local copy up and running follow these simple example steps.
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.-->
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_Para mais exemplos, acesse esta [Documantação](https://github.com/matheushoske/CadClientesAPI)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -150,7 +159,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [] Feature 3
     - [] Nested Feature-->
 
-See the [open issues](https://github.com/matheushoske/CadClientes/issues) for a full list of proposed features (and known issues).
+Veja as [issues abertas](https://github.com/matheushoske/CadClientes/issues) para uma lista completa das features propostas (e problemas encontrados).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
