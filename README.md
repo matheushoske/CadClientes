@@ -31,18 +31,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  
+  # CADASTRO DE CLIENTES (SOLID) CONSUMINDO API REST .NET MVC
+  
   <a href="https://github.com/matheushoske/CadClientes">
-    <img src="https://github.com/matheushoske/CadClientes/blob/main/images/program.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/matheushoske/CadClientes/blob/main/images/program.png" alt="Logo" width="200" height="200">
   </a>
 
-<h3 align="center">Cadastro de Clientes</h3>
+
 
   <p align="center">
-    Foi desenvolvido em Windows forms / C# utilizando .NET Framework 4.7.2,
- uma ferramenta para o cadastro e consulta de clientes consumindo a API 
- <a href="https://viacep.com.br/">VIACEP</a> para a busca de endereços e consumindo também a
- API <a href="https://github.com/matheushoske/CadClientesAPI">CadClientesAPI</a>, desenvolvida em asp.net Core para a consulta no banco 
- de dados em MySQL.
+  Projeto desenvolvido em C#, utilizando .NET Core 5.0 com Windows Forms,
+uma ferramenta para o cadastro e consulta de clientes consumindo a API 
+https://viacep.com.br/ para a busca de endereços e consumindo também a
+API <a href="">ConsultaAPI</a>, desenvolvida em ASP.NET Core para a consulta no banco 
+de dados em MySQL.
     <br />
     <a href="https://github.com/matheushoske/CadClientes"><strong>Explore »</strong></a>
     <br />
@@ -84,39 +87,47 @@
 </details>
 
 
+ 
+ <h2>Arquitetura Utilizada:</h2>
+ 
+<h3>
+ 
+ -[POO]()
+ 
+ -[Aplicção de conceitos SOLID]()
+ 
+ -[Design Patterns]()
+ 
+ -[Injeção de dependências]()</h3>
+ 
+--------------------------------------------
 
-<!-- ABOUT THE PROJECT 
-## About The Project
+## Projeto cadastro de clientes
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Desenvolvido em C# utilizando .NET Core 5.0 com Windows Forms,
+uma ferramenta para o cadastro e consulta de clientes consumindo a API 
+https://viacep.com.br/ para a busca de endereços e consumindo também a
+API "ConsultaAPI", desenvolvida em asp.net Core para a consulta no banco 
+de dados em MySQL.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
--->
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Projeto API
 
+Foi desenvolvida a API de consulta e inserção de clientes em asp.net core,
+utilizando 2 métodos GET ( consulta de clientes por id e consulta de ultimo
+cliente cadastrado) e 1 método POST para a inserção de um novo cliente no banco
+de dados.
 
-
-### Built With
-
-* [C#](https://angular.io/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-## Getting Started
-<!-- GETTING STARTED 
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
--->
-### Prerequisites
-
-* .NET Framework 4.7.2 instalado
+No desenvolvimento da API, foi utilizado o MySQL.
+Não foi utilizado nenhum framework de ORM como o Entity Framework (Em breve).
+Também foi utilizado a Documentação Swagger para facilitar os testes de requisição.
+Acesso swagger em localhost: 
+https://localhost:44382/swagger/
 
 
-### Installation
 
-1. Instale e configure a API CadClientesAPI [https://github.com/matheushoske/CadClientesAPI](https://github.com/matheushoske/CadClientesAPI)
+### INSTALANDO O PROJETO DA APLICAÇÃO
+
+1. Instale e configure a API CadClientesAPI seguindo a documentação [https://github.com/matheushoske/CadClientesAPI](https://github.com/matheushoske/CadClientesAPI)
 2. Clone o repository
    ```sh
    git clone https://github.com/matheushoske/CadClientes.git
@@ -130,29 +141,72 @@ To get a local copy up and running follow these simple example steps.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+ ## UTILIZAÇÃO DA APLICAÇÃO
+ --------------------------
+ Após executar e testar a API no servidor, caso esteja funcionando corretamente,
+ execute o projeto CadClientes.
+Ao abrir, caso não exiba nenhuma mensagem de falha de comunicação com a API, o
+cadastro de clientes poderá ser realizado normalmente.
+Durante o cadastro do cliente, você pode inserir um CEP e buscar por seu endereço
+clicando no botaão buscar.
+Após o cadastro de algum cliente, será possível consulta-lo, inserindo seu id e 
+clicando no botão pesquisar ID.
+
+Caso depare com alguma mensagem de falha de comunicação com a API, acesse as configurações
+e configure a URI da API corretamente
+
+## INSTALANDO MYSQL NO SERVIDOR DE API
+--------------------------------------
+Para o funcionamento correto da API, será necessário realizar a instalação e
+configuração do banco de dados MySQL
+ * Instalar serviço do MySQL
+ Para a instalação do serviço do MySQL será necessário primeiramente executar
+ o instalador MySQL64bits.exe :
+   https://1drv.ms/u/s!Ajl_kq6K-uvNyEWbAadJxrqgeioF?e=1SX6nA
+
+ * Instalar o conector do MySQL para .NET
+ Execute o instalador "mysql-connector-net.msi" :
+   https://1drv.ms/u/s!Ajl_kq6K-uvNyEeYPxFbMN2iDTwI?e=PBUcec
+
+ * Execute as queries para criação do Banco
+ Para criar o banco de dados, as tabelas e os usuários execute o
+ script "sql-create.sql":
+   https://1drv.ms/u/s!Ajl_kq6K-uvNyEYfqIUhHCcsYddG?e=XMjav9
+ será realizado a criação do usuário 'rede' com senha 'rede'
+ 
+## COPYRIGHT / CONTATOS
+-------------------------
+Programa e API desenvolvidos por Matheus Hoske Aguiar
+
+[![Github][github-shield]]
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+Contato: matheushoske@gmail.com 
+
+Copyright @ Matheus Hoske - 2021
+
+Todos os direitos reservados*
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+
 
 <!-- USAGE EXAMPLES 
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.-->
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Voltar ao topo</a>)</p>
 
 
 
 <!-- ROADMAP 
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature-->
-
 See the [open issues](https://github.com/matheushoske/CadClientes/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -175,22 +229,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
-## Contact
 
-Matheus Hoske - matheushoske@gmail.com
-
-Project Link: [https://github.com/matheushoske/CadClientes](https://github.com/matheushoske/CadClientes)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -218,5 +263,7 @@ Project Link: [https://github.com/matheushoske/CadClientes](https://github.com/m
 [license-shield]: https://img.shields.io/github/license/matheushoske/CadClientes.svg?style=for-the-badge
 [license-url]: https://github.com/matheushoske/CadClientes/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-link]: https://github.com/matheushoske
 [linkedin-url]: https://www.linkedin.com/in/matheus-hoske/
 [product-screenshot]: images/program.png
