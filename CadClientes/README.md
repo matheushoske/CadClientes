@@ -1,42 +1,48 @@
-?
-## CADASTRO DE CLIENTES (SOLID) - CONSUMINDO API REST .NET MVC
+
+# CADASTRO DE CLIENTES (SOLID) CONSUMINDO API REST .NET MVC
  
- Arquitetura Utilizada
+ <h2>Arquitetura Utilizada:</h2>
  
- -POO
- -APlicÁ„o de conceitos SOLID
- -Design Patterns
- -InjeÁ„o de dependÍncias
+<h3>
+ 
+ -[POO]()
+ 
+ -[Aplic√ß√£o de conceitos SOLID]()
+ 
+ -[Design Patterns]()
+ 
+ -[Inje√ß√£o de depend√™ncias]()</h3>
+ 
 --------------------------------------------
 
 ## Projeto cadastro de clientes
 
-Foi desenvolvido em Windows forms / C# utilizando .NET Framework 5.0,
+Desenvolvido em C# utilizando .NET Core 5.0 com Windows Forms,
 uma ferramenta para o cadastro e consulta de clientes consumindo a API 
-https://viacep.com.br/ para a busca de endereÁos e consumindo tambÈm a
+https://viacep.com.br/ para a busca de endere√ßos e consumindo tamb√©m a
 API "ConsultaAPI", desenvolvida em asp.net Core para a consulta no banco 
 de dados em MySQL.
 
 ## Projeto API
 
-Foi desenvolvida a API de consulta e inserÁ„o de clientes em asp.net core,
-utilizando 2 mÈtodos GET ( consulta de clientes por id e consulta de ultimo
-cliente cadastrado) e 1 mÈtodo POST para a inserÁ„o de um novo cliente no banco
+Foi desenvolvida a API de consulta e inser√ß√£o de clientes em asp.net core,
+utilizando 2 m√©todos GET ( consulta de clientes por id e consulta de ultimo
+cliente cadastrado) e 1 m√©todo POST para a inser√ß√£o de um novo cliente no banco
 de dados.
 
 No desenvolvimento da API, foi utilizado o MySQL.
-N„o foi utilizado nenhum framework de ORM como o Entity Framework (Em breve).
-TambÈm foi utilizado a DocumentaÁ„o Swagger para facilitar os testes de requisiÁ„o.
+N√£o foi utilizado nenhum framework de ORM como o Entity Framework (Em breve).
+Tamb√©m foi utilizado a Documenta√ß√£o Swagger para facilitar os testes de requisi√ß√£o.
 Acesso swagger em localhost: 
 https://localhost:44382/swagger/
 
 
 ## INSTALANDO MYSQL NO SERVIDOR DE API
 --------------------------------------
-Para o funcionamento correto da API, ser· necess·rio realizar a instalaÁ„o e
-configuraÁ„o do banco de dados MySQL
- * Instalar serviÁo do MySQL
- Para a instalaÁ„o do serviÁo do MySQL ser· necess·rio primeiramente executar
+Para o funcionamento correto da API, ser√° necess√°rio realizar a instala√ß√£o e
+configura√ß√£o do banco de dados MySQL
+ * Instalar servi√ßo do MySQL
+ Para a instala√ß√£o do servi√ßo do MySQL ser√° necess√°rio primeiramente executar
  o instalador MySQL64bits.exe :
    https://1drv.ms/u/s!Ajl_kq6K-uvNyEWbAadJxrqgeioF?e=1SX6nA
 
@@ -44,24 +50,24 @@ configuraÁ„o do banco de dados MySQL
  Execute o instalador "mysql-connector-net.msi" :
    https://1drv.ms/u/s!Ajl_kq6K-uvNyEeYPxFbMN2iDTwI?e=PBUcec
 
- * Execute as queries para criaÁ„o do Banco
- Para criar o banco de dados, as tabelas e os usu·rios execute o
+ * Execute as queries para cria√ß√£o do Banco
+ Para criar o banco de dados, as tabelas e os usu√°rios execute o
  script "sql-create.sql":
    https://1drv.ms/u/s!Ajl_kq6K-uvNyEYfqIUhHCcsYddG?e=XMjav9
- ser· realizado a criaÁ„o do usu·rio 'rede' com senha 'rede'
+ ser√° realizado a cria√ß√£o do usu√°rio 'rede' com senha 'rede'
 
- ## UTILIZA«√O DA APLICA«√O
+ ## UTILIZA√á√ÉO DA APLICA√á√ÉO
  --------------------------
- ApÛs executar e testar a API no servidor, caso esteja funcionando corretamente,
+ Ap√≥s executar e testar a API no servidor, caso esteja funcionando corretamente,
  execute o projeto CadClientes.
-Ao abrir, caso n„o exiba nenhuma mensagem de falha de comunicaÁ„o com a API, o
-cadastro de clientes poder· ser realizado normalmente.
-Durante o cadastro do cliente, vocÍ pode inserir um CEP e buscar por seu endereÁo
-clicando no bota„o buscar.
-ApÛs o cadastro de algum cliente, ser· possÌvel consulta-lo, inserindo seu id e 
-clicando no bot„o pesquisar ID.
+Ao abrir, caso n√£o exiba nenhuma mensagem de falha de comunica√ß√£o com a API, o
+cadastro de clientes poder√° ser realizado normalmente.
+Durante o cadastro do cliente, voc√™ pode inserir um CEP e buscar por seu endere√ßo
+clicando no bota√£o buscar.
+Ap√≥s o cadastro de algum cliente, ser√° poss√≠vel consulta-lo, inserindo seu id e 
+clicando no bot√£o pesquisar ID.
 
-Caso depare com alguma mensagem de falha de comunicaÁ„o com a API, acesse as configuraÁıes
+Caso depare com alguma mensagem de falha de comunica√ß√£o com a API, acesse as configura√ß√µes
 e configure a URI da API corretamente
 
 ## COPYRIGHT / CONTATOS
