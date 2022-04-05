@@ -184,7 +184,7 @@ Programa e API desenvolvidos por Matheus Hoske Aguiar
 
 Contato: matheushoske@gmail.com 
 
-Copyright @ Matheus Hoske - 2021
+Copyright @ Matheus Hoske - 2022
 
 Todos os direitos reservados*
 
