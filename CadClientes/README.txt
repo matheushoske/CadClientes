@@ -1,11 +1,16 @@
-﻿## CADASTRO DE CLIENTES (SIMPLES) - CONSUMINDO API REST .NET MVC
+﻿## CADASTRO DE CLIENTES (SOLID) - CONSUMINDO API REST .NET MVC
+ 
+ Arquitetura Utilizada
+ 
+ -POO
+ -APlicção de conceitos SOLID
+ -Design Patterns
+ -Injeção de dependências
 --------------------------------------------
-Arquivos do projeto disponíveis em:
-https://1drv.ms/u/s!Ajl_kq6K-uvNyEMmTOqICFCNyIVD?e=RAl4CV
 
 ## Projeto cadastro de clientes
 
-Foi desenvolvido em Windows forms / C# utilizando .NET Framework 4.7.2,
+Foi desenvolvido em Windows forms / C# utilizando .NET Framework 5.0,
 uma ferramenta para o cadastro e consulta de clientes consumindo a API 
 https://viacep.com.br/ para a busca de endereços e consumindo também a
 API "ConsultaAPI", desenvolvida em asp.net Core para a consulta no banco 
@@ -18,8 +23,8 @@ utilizando 2 métodos GET ( consulta de clientes por id e consulta de ultimo
 cliente cadastrado) e 1 método POST para a inserção de um novo cliente no banco
 de dados.
 
-No desenvolvimento da API, optei por utilizar o MySQL.
-Não foi utilizado nenhum framework de ORM como o Entity Framework.
+No desenvolvimento da API, foi utilizado o MySQL.
+Não foi utilizado nenhum framework de ORM como o Entity Framework (Em breve).
 Também foi utilizado a Documentação Swagger para facilitar os testes de requisição.
 Acesso swagger em localhost: 
 https://localhost:44382/swagger/
