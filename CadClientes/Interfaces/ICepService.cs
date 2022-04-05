@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace CadClientes.Util
+using CadClientes.Model;
+namespace CadClientes.Interfaces
 {
-   public static class Variaveis
+    public interface ICepService
     {
-        public static string URI;
-        public static bool statusapi;
+        Cep BuscarCep(string Cep);
     }
 }

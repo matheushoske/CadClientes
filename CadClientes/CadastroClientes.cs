@@ -2,35 +2,56 @@
 using System.Windows.Forms;
 using CadClientes.Service;
 using CadClientes.Model;
-using CadClientes.Util;
+using CadClientes.Repository;
+using CadClientes.DAO;
+using CadClientes.Interfaces;
+using System.Net.Http;
+
+// <copyright file="CadastroClientes.cs" company="matheushoske">
+// Copyright (c) 2022 All Rights Reserved. Para a reutilização do código 
+// o Copyright será obrigatório
+// </copyright>
+// <author>Matheus Hoske Aguiar</author>
+// <date>05/04/2022 07:48:58 AM </date>
+// <summary>Programa desenvolvido para simular o cadastro de clientes via API, e
+// consulta de CEPs com a API viacep. Arquitetura baseada em POO, SOLID e
+// Design Patterns.
+// </summary>
+//---------------------------------------------------------------------
+// Saiba mais sobre o projeto: https://github.com/matheushoske/CadClientes
+// Projeto aberto à contribuições
 
 namespace CadClientes
 {
     public partial class CadastroClientes : Form
     {
-        public CadastroClientes()
+        private readonly IClienteService _clienteService;
+        private readonly ICepService _cepService;
+        private readonly IFormConfig _formConfig;
+        public CadastroClientes(IClienteService clienteService, ICepService cepService, IFormConfig formConfig)
         {
-            Variaveis.URI = "https://localhost:44382/api/Clientes";
-            
+            _formConfig = formConfig;
+            _clienteService = clienteService;
+            _cepService = cepService;
             InitializeComponent();
-            if (RotinasGerais.TestarApi()) 
-            { 
-                lblStatusAPI.Text = ""; 
-            }
+        }
+        private void CadastroClientes_Load(object sender, EventArgs e)
+        {
+            if (_clienteService.TestarComunicacao())
+                lblStatusAPI.Text = "";
             CarregaCampos();
-            
+
             dtpNasc.Format = DateTimePickerFormat.Custom;
             dtpNasc.CustomFormat = "dd/MM/yyyy";
             dtpNasc.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             
             if (txtCep.Text.Length == 8)
             {
-                ServiceCep ncep = new ServiceCep();
-                Cep cepDados = ncep.BuscaCep(txtCep.Text);
+                
+                Cep cepDados = _cepService.BuscarCep(txtCep.Text);
                 if (cepDados != null)
                 {
                     txtLogradouro.Text = cepDados.logradouro;
@@ -44,7 +65,7 @@ namespace CadClientes
             }
             else 
             {
-                MessageBox.Show("CEP INCORRETO", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("FORMATO DO CEP INCORRETO", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,8 +84,7 @@ namespace CadClientes
             }
             else if (e.KeyChar.ToString() == "\r") //BUSCA CEP CASO O CLICK SEJA ENTER
             {
-                EventArgs e2 = new EventArgs();
-                btnBuscar_Click(sender, e2);
+                btnBuscar_Click(sender, new());
             }
                 
         }
@@ -84,16 +104,16 @@ namespace CadClientes
 
         private void CadastrarCliente() 
         {
-            Cliente cli = new Cliente();
-            ServiceCliente servCliente = new ServiceCliente();
-            cli.nome = txtNome.Text;
-            cli.dt_nasc = dtpNasc.Value;
-            cli.cep = int.Parse(txtCep.Text);
-            cli.cidade = txtCidade.Text;
-            cli.logradouro = txtLogradouro.Text;
-            cli.estado = txtEstado.Text;
-
-            servCliente.InsereCliente(cli);
+            Cliente cli = new() 
+            { 
+                nome = txtNome.Text,
+                dt_nasc = dtpNasc.Value,
+                cep = long.Parse(txtCep.Text),
+                cidade = txtCidade.Text,
+                logradouro = txtLogradouro.Text,
+                estado = txtEstado.Text
+            };
+            _clienteService.AdicionarCliente(cli);
             MessageBox.Show("Cliente "+cli.nome+" cadastrado com sucesso!", "Cliente cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimparCampos();
 
@@ -112,10 +132,7 @@ namespace CadClientes
 
         private void CarregaCampos() 
         {
-            ServiceCliente servCliente = new ServiceCliente();
-            Cliente cli = new Cliente();
-            txtID.Text = servCliente.RetornaUltimoClienteid(1).ToString();
-            
+            txtID.Text = _clienteService.RetornaUltimoClienteid(1).ToString();
         }
 
         
@@ -124,31 +141,21 @@ namespace CadClientes
         {
            
             this.Hide();
-            var frmConfig = new Config();
-            frmConfig.Closed += (s, args) => this.Close();
-            frmConfig.Show();
+            _formConfig.Closed += (s, args) => this.Close();
+            _formConfig.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cliente cli = new Cliente();
-            ServiceCliente servCliente = new ServiceCliente();
-           cli = servCliente.BuscaCliente((int)nudID.Value);
+            var cli = _clienteService.BuscarCliente((int)nudID.Value);
             if (cli != null)
-            {
                 MessageBox.Show("Nome: " + cli.nome + "\nData de nascimento: " + cli.dt_nasc.ToString("dd/MM/yyyy") + "\nCep: " + cli.cep + "\nCidade: " + cli.cidade + "\nEstado: " + cli.estado + "\nLogradouro: " + cli.logradouro + "", "Informações do cliente: " + nudID.Value + "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else 
-            {
                 MessageBox.Show("Não foi possível encontrar o cliente!", "Informações do cliente: " + nudID.Value + "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
 
            
         }
 
-        private void CadastroClientes_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
