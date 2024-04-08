@@ -38,12 +38,15 @@
 <h3 align="center">Cadastro de Clientes</h3>
 
   <p align="center">
+    Este projeto está disponível em 2 branches, ("main" e "SOLID") onde este (main), foi desenvolvido sem utilizar as regras do SOLID. Já no branch "SOLID", o código foi desenvolvido utilizando estas.
+    <div style="border:1 solid #fff" />-----------------------</div>
     Foi desenvolvido em Windows forms / C# utilizando .NET Framework 4.7.2,
  uma ferramenta para o cadastro e consulta de clientes consumindo a API 
  <a href="https://viacep.com.br/">VIACEP</a> para a busca de endereços e consumindo também a
  API <a href="https://github.com/matheushoske/CadClientesAPI">CadClientesAPI</a>, desenvolvida em asp.net Core para a consulta no banco 
  de dados em MySQL.
-    <br />
+<br />
+    
     <a href="https://github.com/matheushoske/CadClientes"><strong>Explore »</strong></a>
     <br />
     <br />
